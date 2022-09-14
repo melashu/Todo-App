@@ -13,6 +13,9 @@
   justify-content: center;
   align-items: center;
   row-gap: 12px;
+  border: 2px solid rgb(29, 156, 241);
+  min-height: 80vh;
+  height: 100%;
 }
 
 .menu {
