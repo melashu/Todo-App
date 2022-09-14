@@ -1,0 +1,14 @@
+header {
+  width: 100%;
+  margin: 24px 0;
+}
+
+.title {
+  color: rgb(119, 117, 117);
+  text-align: center;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+}
