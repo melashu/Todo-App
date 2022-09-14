@@ -30,6 +30,7 @@ const TodoInput = (props) => {
           placeholder="Add your todo"
           value={title}
           onChange={changeTitle}
+          required
         />
 
         <button type="submit">
