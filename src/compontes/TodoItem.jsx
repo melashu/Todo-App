@@ -1,20 +1,21 @@
-import React from "react";
-import { useState } from "react";
-import style from "../css/TodoItem.module.css";
-import { AiFillDelete } from "react-icons/ai";
+import React, { useState } from 'react';
+
+import { AiFillDelete } from 'react-icons/ai';
+import style from '../css/TodoItem.module.css';
+
 const TodoItem = (props) => {
   const { id, title, completed } = props.todo;
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   const [titleOnEdit, setTitleOnEdit] = useState({
-    title: title,
+    title,
     isEditing: false,
   });
 
   // const [completedValue, setCompletedValue] = useState(completed);
   const completedStyle = {
-    color: "#222",
-    textDecoration: "line-through",
+    color: '#222',
+    textDecoration: 'line-through',
   };
   const completedHundler = () => {
     props.completedStatusHundler(id);
@@ -29,9 +30,9 @@ const TodoItem = (props) => {
   };
 
   if (titleOnEdit.isEditing) {
-    viewMode.display = "none";
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none";
+    editMode.display = 'none';
   }
 
   const dblHundler = () => {
@@ -39,15 +40,15 @@ const TodoItem = (props) => {
   };
 
   const keyDownHundler = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       setTitleOnEdit((prev) => ({ ...prev, isEditing: !prev.isEditing }));
       props.edithundler(id, titleOnEdit.title);
     }
   };
   return (
-    <li key={id}>
+    <li key={id} className={style.itemlist}>
       <div
-        className={style["list-container"]}
+        className={style['list-container']}
         onDoubleClick={dblHundler}
         style={viewMode}
       >

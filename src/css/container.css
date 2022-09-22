@@ -23,4 +23,14 @@
   top: 40px;
   left: 40px;
   font-size: 40px;
+  cursor: pointer;
+}
+
+.closemenu {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  margin: 15px 0;
 }

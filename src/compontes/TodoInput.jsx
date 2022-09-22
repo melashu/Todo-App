@@ -28,7 +28,6 @@ const TodoInput = (props) => {
         <input
           type="text"
           placeholder="Add your todo"
-          value={title}
           onChange={changeTitle}
           required
         />

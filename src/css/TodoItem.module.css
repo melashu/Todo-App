@@ -1,4 +1,4 @@
-li {
+.itemlist {
   list-style-type: none;
   margin-bottom: 15px;
   width: 60vw;
@@ -18,14 +18,18 @@ li {
 
 .delbutton {
   float: right;
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
   color: #ec6f09;
+  background-color: blueviolet;
+
+  padding: 10px;
 }
 
 .checkbox {
   width: 20px;
   height: 20px;
+  
 }
 
 .inputTitle {

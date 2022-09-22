@@ -3,6 +3,7 @@ import Header from "./Header";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import { HiMenu } from "react-icons/hi";
+import SideBar from "./SideBar";
 function TodoContainer() {
   const [todos, setTodos] = useState([
     { id: 1, title: "Read about react route", completed: false },
@@ -10,6 +11,7 @@ function TodoContainer() {
     { id: 3, title: "Learn about event handling", completed: false },
   ]);
 
+  const [isShow, setShow] = useState(false);
   function addTodoItem(value) {
     const newTask = {
       id: todos.length + 1,
@@ -41,10 +43,15 @@ function TodoContainer() {
     });
   }
 
+  function showMenu() {
+    setShow((prev) => !prev);
+  }
+
   return (
     <>
-      <HiMenu className="menu" />
-      <div className="container">
+      <HiMenu className="menu" onClick={showMenu} />
+      <SideBar isShow={isShow} onClick={showMenu} />
+      <div className="container" style={isShow ? { marginLeft: "220px" } : {}}>
         <Header />
         <TodoInput addTodoItem={addTodoItem} />
         <TodoList
