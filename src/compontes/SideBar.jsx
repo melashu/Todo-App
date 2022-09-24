@@ -1,7 +1,4 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import About from "../pages/about";
-import Nomach from "../pages/nomach";
-import TodoContainer from "./TodoContainer";
 import style from "../css/SideBar.module.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 const SideBar = ({ isShow, onClick }) => {
@@ -39,11 +36,6 @@ const SideBar = ({ isShow, onClick }) => {
           })}
         </ul>
       </nav>
-      {/* <Routes>
-        <Route path="/" element={<TodoContainer />} />
-        <Route path="/About" element={<About />} />
-        <Route path="*" element={<Nomach />} />
-      </Routes> */}
     </>
   );
 };
